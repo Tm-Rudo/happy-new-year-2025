@@ -106,8 +106,8 @@ const ChucTet = () => {
           Chúc Tết!
         </h1>
 
-        <p className="text-white mt-[25px] text-lg">
-          Nhấn vào nút bên dưới để nhận một lời chúc Tết bất ngờ.
+        <p className="text-white mt-[25px] text-lg text-center px-4 max-w-full">
+          Nhấn nút bên dưới để nhận một lời chúc Tết bất ngờ.
         </p>
 
         <textarea

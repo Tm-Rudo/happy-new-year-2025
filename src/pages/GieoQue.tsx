@@ -135,7 +135,7 @@ const GieoQue = () => {
           Chúc Tết!
         </h1>
 
-        <p className="text-white mt-[25px] text-lg">
+        <p className="text-white mt-[25px] text-lg text-center px-4 max-w-full">
           Nhấn nút dưới đây để gieo quẻ và nhận được lời tiên tri đầu năm mới!
         </p>
 
