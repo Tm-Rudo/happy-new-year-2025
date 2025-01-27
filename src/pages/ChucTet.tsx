@@ -112,7 +112,7 @@ const ChucTet = () => {
 
         <textarea
           //   type="text"
-          className="bg-amber-100 rounded-xl text-center mt-[25px] p-2 w-[450px] h-20 "
+          className="bg-amber-100 rounded-xl text-center mt-[25px] p-2 w-[90%] max-w-[450px] h-20 resize-none "
           placeholder="Lời chúc sẽ ở đây"
           disabled
           value={loiChuc}
