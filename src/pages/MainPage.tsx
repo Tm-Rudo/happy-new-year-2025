@@ -73,7 +73,7 @@ const MainPage = () => {
               className="font-bold text-white text-xl mt-[25px]"
               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
             >
-              Đếm ngược ngày hết Tết :v
+              Đếm ngày hết Tết :v
             </h3>
             <h1
               className="font-bold text-amber-400 text-4xl mt-[25px]"
