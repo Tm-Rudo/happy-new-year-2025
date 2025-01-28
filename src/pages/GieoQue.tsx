@@ -127,7 +127,7 @@ const GieoQue = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen ">
-      {/* <audio src="/img/bg.mp3" autoPlay loop /> */}
+      <audio src="/img/bg.mp3" autoPlay loop />
       <div className="text-center">
         <h1
           className="font-bold text-yellow-300 text-4xl mt-[10px]"
