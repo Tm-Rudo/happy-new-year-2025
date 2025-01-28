@@ -44,8 +44,10 @@ const MainPage = () => {
 
   return (
     <div>
+      {/* <audio src="/img/bg.mp3" autoPlay loop /> */}
+
       {/* chúc mừng năm mới */}
-      <div className=" text-center mt-[12%]">
+      <div className=" text-center mt-[40%]">
         <h1
           className="font-bold text-white text-4xl"
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
