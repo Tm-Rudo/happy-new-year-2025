@@ -3,38 +3,37 @@ import { useNavigate } from "react-router-dom";
 // import ChucTet from "./ChucTet";
 // import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 const MainPage = () => {
-  //
   const navigate = useNavigate();
-  //
   const newYearDate = new Date("2025-01-29T00:00:00").getTime();
-  //
+  // const newYearDate = new Date("2025-01-28T14:42:00").getTime();
+
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
-  //
+  const [isNewYear, setIsNewYear] = useState(false); // Thêm trạng thái kiểm tra năm mới
+
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const timeRemaining = newYearDate - now;
 
-      // Tính toán thời gian còn lại
-      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor(
-        (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
-      );
-      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-      // Cập nhật state
       if (timeRemaining < 0) {
         clearInterval(interval);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        setIsNewYear(true); // Đánh dấu đã đến năm mới
       } else {
+        // Tính toán thời gian còn lại
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
         setTimeLeft({ days, hours, minutes, seconds });
       }
     }, 1000);
@@ -44,10 +43,7 @@ const MainPage = () => {
 
   return (
     <div>
-      {/* <audio src="/img/bg.mp3" autoPlay loop /> */}
-
-      {/* chúc mừng năm mới */}
-      <div className=" text-center mt-[40%] lg:mt-[15%]">
+      <div className="text-center mt-[40%] lg:mt-[15%]">
         <h1
           className="font-bold text-white text-4xl"
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
@@ -63,22 +59,33 @@ const MainPage = () => {
           525.600 phút thành công và 31.536.000 giây mã đáo.
         </h2>
 
-        {/* dếm ngược ngày tết */}
-        <h3
-          className="font-bold text-white text-xl mt-[25px]"
-          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
-        >
-          Đếm ngược ngày tết
-        </h3>
-        <h1
-          className="font-bold text-amber-400 text-4xl mt-[25px]"
-          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
-        >
-          {timeLeft.days} ngày {timeLeft.hours} giờ {timeLeft.minutes} phút{" "}
-          {timeLeft.seconds} giây
-        </h1>
+        {/* Nếu là năm mới, hiển thị lời chúc mừng */}
+        {isNewYear ? (
+          <h1
+            className="font-bold text-amber-400 text-4xl mt-[50px]"
+            style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+          >
+            Chúc mừng năm mới Ất Tỵ 2025!
+          </h1>
+        ) : (
+          <>
+            <h3
+              className="font-bold text-white text-xl mt-[25px]"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+            >
+              Đếm ngược ngày tết
+            </h3>
+            <h1
+              className="font-bold text-amber-400 text-4xl mt-[25px]"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+            >
+              {timeLeft.days} ngày {timeLeft.hours} giờ {timeLeft.minutes} phút{" "}
+              {timeLeft.seconds} giây
+            </h1>
+          </>
+        )}
 
-        {/* btn Chúc tết */}
+        {/* Button */}
         <div className="mt-[55px] flex justify-center gap-6">
           <button
             className="cursor-pointer flex items-center justify-center border-solid w-[100px] h-[50px] text-white rounded-full bg-gradient-to-b from-red-500 to-pink-500 hover:from-pink-500 hover:to-red-500"
