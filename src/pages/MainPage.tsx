@@ -93,6 +93,17 @@ const MainPage = () => {
           >
             Gieo quẻ
           </button>
+
+          <button
+            className="cursor-pointer flex items-center justify-center border-solid w-[100px] h-[50px] text-white rounded-full bg-gradient-to-b from-red-500 to-pink-500 hover:from-pink-500 hover:to-red-500"
+            style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+            onClick={() =>
+              (window.location.href =
+                "https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            }
+          >
+            Nhạc Tết
+          </button>
         </div>
       </div>
     </div>
