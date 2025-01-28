@@ -21,7 +21,7 @@ function App() {
         loop
         muted
       />
-      {/* <audio src="/img/bg.mp3" autoPlay loop /> */}
+      <audio src="/img/bg.mp3" autoPlay loop />
 
       <Router>
         <Routes>
