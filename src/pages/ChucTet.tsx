@@ -119,7 +119,7 @@ const ChucTet = () => {
           value={loiChuc}
         />
         <div className="mt-[25px]" onClick={randomChuc}>
-          <button className="w-[400px] cursor-pointer text-white px-6 py-2 rounded-xl w-[450px]rounded-full bg-gradient-to-b from-red-500 to-pink-500 hover:from-pink-500 hover:to-red-500 transition duration-300 mb-4">
+          <button className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] cursor-pointer text-white px-6 py-2 rounded-xl bg-gradient-to-b from-red-500 to-pink-500 hover:from-pink-500 hover:to-red-500 transition duration-300 mb-4">
             Nhận lời chúc
           </button>
         </div>
