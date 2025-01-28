@@ -62,7 +62,7 @@ const MainPage = () => {
         {/* Nếu là năm mới, hiển thị lời chúc mừng */}
         {isNewYear ? (
           <h1
-            className="font-bold text-amber-400 text-4xl mt-[50px]"
+            className="font-bold text-yellow-300 text-4xl mt-[50px]"
             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
           >
             Chúc mừng năm mới Ất Tỵ 2025!
