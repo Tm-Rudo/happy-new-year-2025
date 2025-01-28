@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 const MainPage = () => {
   const navigate = useNavigate();
-  const newYearDate = new Date("2025-01-29T00:00:00").getTime();
+  const newYearDate = new Date("2025-02-03T00:00:00").getTime();
   // const newYearDate = new Date("2025-01-28T14:42:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
@@ -73,7 +73,7 @@ const MainPage = () => {
               className="font-bold text-white text-xl mt-[25px]"
               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
             >
-              Đếm ngược ngày tết
+              Đếm ngược ngày hết Tết :v
             </h3>
             <h1
               className="font-bold text-amber-400 text-4xl mt-[25px]"
